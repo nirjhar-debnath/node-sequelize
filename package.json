@@ -1,0 +1,23 @@
+{
+  "name": "sample-api",
+  "version": "1.0.0",
+  "description": "crud operations using node, sequelize and postgres",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nirjhar-debnath/sample-api.git"
+  },
+  "author": "nirjhar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nirjhar-debnath/sample-api/issues"
+  },
+  "homepage": "https://github.com/nirjhar-debnath/sample-api#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "sequelize": "^6.21.4"
+  }
+}
