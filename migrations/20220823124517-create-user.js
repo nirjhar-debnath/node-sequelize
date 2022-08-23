@@ -6,16 +6,14 @@ module.exports = {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.UUID,
+        defaultType: Sequelize.UUIDV4
       },
       fullname: {
         type: Sequelize.STRING
       },
       countryCode: {
         type: Sequelize.INTEGER
-      },
-      aadharId: {
-        type: Sequelize.UUID
       },
       createdAt: {
         allowNull: false,

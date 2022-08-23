@@ -3,29 +3,29 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class User extends Model {
+  class AadharCardDetails extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
-    static associate({AadharCardDetails}) {
+    static associate({User}) {
       // define association here
-      this.belongsTo(AadharCardDetails, { foreignKey: 'aadharId' })
+      this.hasOne(User, { foreignKey: 'aadharId' })
     }
   }
-  User.init({
+  AadharCardDetails.init({
     id: {
       type: DataTypes.UUID,
       defaultValue: DataTypes.UUIDV4,
       allowNull: false,
       primaryKey: true
     },
-    fullname: DataTypes.STRING,
-    countryCode: DataTypes.INTEGER
+    aadharNumber: DataTypes.STRING,
+    name: DataTypes.STRING
   }, {
     sequelize,
-    modelName: 'User',
+    modelName: 'AadharCardDetails',
   });
-  return User;
+  return AadharCardDetails;
 };
